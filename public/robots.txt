@@ -1,4 +1,9 @@
+# *
 User-agent: *
 Allow: /
 
+# Host
+Host: https://buyobot.dithari.com
+
+# Sitemaps
 Sitemap: https://buyobot.dithari.com/sitemap.xml
