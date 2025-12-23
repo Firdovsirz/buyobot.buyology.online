@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import Image from 'next/image';
 import EmojiEventsIcon from '@mui/icons-material/EmojiEvents';
 import CheckCircleIcon from '@mui/icons-material/CheckCircle';
@@ -61,15 +62,17 @@ export default function IntroSection() {
 
                     {/* Buttons */}
                     <div className="mt-6 flex flex-wrap gap-4">
-                        <button className="
+                        <Link href={"/contact-us"}>
+                            <button className="
                             py-2 px-6
                             rounded-full
                             bg-[#fcbc1f]
                             text-white
                             font-bold
                         ">
-                            Book a meet
-                        </button>
+                                Book a meet
+                            </button>
+                        </Link>
 
                         <button className="
                             py-2 px-6

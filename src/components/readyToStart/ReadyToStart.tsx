@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import Image from 'next/image';
 
 export default function ReadyToStart() {
@@ -61,9 +62,11 @@ export default function ReadyToStart() {
                 </p>
 
                 <div>
-                    <button className='bg-white text-[20px] text-[#fcbc1f] font-bold px-[10px] py-[5px] rounded-[30px] cursor-pointer'>
-                        Get started
-                    </button>
+                    <Link href="/contact-us">
+                        <button className='bg-white text-[20px] text-[#fcbc1f] font-bold px-[10px] py-[5px] rounded-[30px] cursor-pointer'>
+                            Get started
+                        </button>
+                    </Link>
                 </div>
             </div>
         </section>
