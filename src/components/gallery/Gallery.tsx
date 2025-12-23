@@ -4,13 +4,13 @@ import CollectionsIcon from '@mui/icons-material/Collections';
 
 export default function Gallery() {
     const images = [
-        "labinterior.jpg",
-        "kidwithkeyboard.jpg",
-        "meetwithparents1.jpg",
-        "meetwithparents2.jpg",
-        "kidwithrobots.png",
-        "kidgroup.png",
-        "singlekid.png"
+        "/labinterior.jpg",
+        "/kidwithkeyboard.jpg",
+        "/meetwithparents1.jpg",
+        "/meetwithparents2.jpg",
+        "/kidwithrobots.png",
+        "/kidgroup.png",
+        "/singlekid.png"
     ];
 
     return (
