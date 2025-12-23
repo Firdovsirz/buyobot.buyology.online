@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Buyobot - Robot Building Workshops</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#137fec",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Space Grotesk", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.5rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-50 transition-colors duration-200">
+    <!-- Navbar -->
+    <header
+        class="sticky top-0 z-50 w-full border-b border-slate-200 bg-background-light/80 backdrop-blur-md dark:border-slate-800 dark:bg-background-dark/80">
+        <div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center gap-2">
+                <div class="flex size-8 items-center justify-center rounded bg-primary text-white">
+                    <span class="material-symbols-outlined">smart_toy</span>
+                </div>
+                <span class="text-xl font-bold tracking-tight text-slate-900 dark:text-slate-50">Buyobot</span>
+            </div>
+            <nav class="hidden md:flex items-center gap-8">
+                <a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary transition-colors"
+                    href="#">Home</a>
+                <a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary transition-colors"
+                    href="#workshops">Workshops</a>
+                <a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary transition-colors"
+                    href="#about">About</a>
+                <a class="text-sm font-medium text-slate-600 hover:text-primary dark:text-slate-300 dark:hover:text-primary transition-colors"
+                    href="#contact">Contact</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <button
+                    class="hidden sm:inline-flex items-center justify-center rounded-xl bg-primary px-6 py-2 text-sm font-bold text-white shadow-sm transition-transform hover:scale-105 hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary">
+                    Sign Up
+                </button>
+                <button class="md:hidden p-2 text-slate-600 dark:text-slate-300">
+                    <span class="material-symbols-outlined">menu</span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden pt-12 pb-16 lg:pt-20 lg:pb-24">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">
+                <div class="flex-1 space-y-8 text-center lg:text-left">
+                    <div
+                        class="inline-flex items-center rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-sm font-medium text-primary">
+                        <span class="mr-2">✨</span> New Summer Workshops Available
+                    </div>
+                    <h1
+                        class="text-4xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-5xl lg:text-6xl">
+                        Build Your Future with <span class="text-primary">Buyobot</span>
+                    </h1>
+                    <p class="text-lg text-slate-600 dark:text-slate-300 sm:text-xl max-w-2xl mx-auto lg:mx-0">
+                        Hands-on robot building workshops for kids using Acebott kits and Arduino programming. Spark
+                        creativity and master STEM skills.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                        <button
+                            class="inline-flex h-12 items-center justify-center rounded-xl bg-primary px-8 text-base font-bold text-white shadow-lg transition-all hover:-translate-y-1 hover:shadow-primary/30">
+                            Book a Workshop
+                        </button>
+                        <button
+                            class="inline-flex h-12 items-center justify-center rounded-xl border border-slate-200 bg-white dark:bg-slate-800 dark:border-slate-700 px-8 text-base font-medium text-slate-900 dark:text-white shadow-sm transition-colors hover:bg-slate-50 dark:hover:bg-slate-700">
+                            View Gallery
+                        </button>
+                    </div>
+                    <!-- Trust Indicators -->
+                    <div
+                        class="pt-4 flex items-center justify-center lg:justify-start gap-6 text-slate-400 dark:text-slate-500">
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-[20px]">check_circle</span>
+                            <span class="text-sm font-medium">Acebott Certified</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <span class="material-symbols-outlined text-[20px]">check_circle</span>
+                            <span class="text-sm font-medium">Age 6-14</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-1 w-full relative">
+                    <div
+                        class="relative w-full aspect-square md:aspect-video lg:aspect-square rounded-2xl overflow-hidden shadow-2xl bg-slate-200 dark:bg-slate-800">
+                        <div class="absolute inset-0 bg-cover bg-center"
+                            data-alt="Young child building a robot with wires and electronics"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBA219g7cYpv8KcJIQd3GwVXUFsQdBU_nPxfwBHmhLhp032NfXMaq6PexxUKZrqTnRmv1o6vtsVwz8dyvHdx37hraVHEXcALFrX6sPa9QYGTSA5wH7uBs-lZUr3bpJr_kIbtGadZ1Q0fGD6_Jp0qGhdyHdR73FXZbQuDLQ2whPBphKnlRJEbX-RhW6pFGIninZ2oAL1C1TXSc-zLe5mkBTBgIVHUAYIDnaGMric2qAPXSKwIwCIW8utW-pRQLE8Ty6p7BHesxh7GOc');">
+                        </div>
+                        <!-- Floating Card Decoration -->
+                        <div
+                            class="absolute -bottom-6 -left-6 hidden md:flex items-center gap-3 rounded-xl bg-white dark:bg-slate-800 p-4 shadow-xl border border-slate-100 dark:border-slate-700">
+                            <div
+                                class="flex h-10 w-10 items-center justify-center rounded-full bg-green-100 text-green-600 dark:bg-green-900/30 dark:text-green-400">
+                                <span class="material-symbols-outlined">emoji_events</span>
+                            </div>
+                            <div>
+                                <p class="text-sm font-bold text-slate-900 dark:text-white">500+ Robots Built</p>
+                                <p class="text-xs text-slate-500 dark:text-slate-400">Join the community</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Decorative blob background -->
+                    <div
+                        class="absolute -z-10 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-primary/10 rounded-full blur-3xl">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Features Section -->
+    <section class="py-16 sm:py-24 bg-white dark:bg-slate-900/50" id="about">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-12 md:text-center max-w-3xl mx-auto">
+                <h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
+                    Why Choose Buyobot?
+                </h2>
+                <p class="mt-4 text-lg text-slate-600 dark:text-slate-300">
+                    We combine fun with education to spark creativity in young minds. Our curriculum is designed to be
+                    engaging, hands-on, and rewarding.
+                </p>
+            </div>
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-3">
+                <!-- Feature 1 -->
+                <div
+                    class="group relative flex flex-col gap-4 rounded-2xl border border-slate-200 bg-background-light p-6 transition-all hover:shadow-lg dark:border-slate-700 dark:bg-background-dark">
+                    <div
+                        class="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-100 text-blue-600 dark:bg-blue-900/30 dark:text-blue-400 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined" style="font-size: 28px;">code</span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white">Learn Arduino</h3>
+                        <p class="mt-2 text-slate-600 dark:text-slate-400">Master the basics of coding and electronics
+                            with real hardware that professionals use.</p>
+                    </div>
+                </div>
+                <!-- Feature 2 -->
+                <div
+                    class="group relative flex flex-col gap-4 rounded-2xl border border-slate-200 bg-background-light p-6 transition-all hover:shadow-lg dark:border-slate-700 dark:bg-background-dark">
+                    <div
+                        class="flex h-12 w-12 items-center justify-center rounded-lg bg-purple-100 text-purple-600 dark:bg-purple-900/30 dark:text-purple-400 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined" style="font-size: 28px;">construction</span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white">Hands-on Building</h3>
+                        <p class="mt-2 text-slate-600 dark:text-slate-400">Build your own robot from scratch with expert
+                            guidance. No prior experience needed.</p>
+                    </div>
+                </div>
+                <!-- Feature 3 -->
+                <div
+                    class="group relative flex flex-col gap-4 rounded-2xl border border-slate-200 bg-background-light p-6 transition-all hover:shadow-lg dark:border-slate-700 dark:bg-background-dark">
+                    <div
+                        class="flex h-12 w-12 items-center justify-center rounded-lg bg-orange-100 text-orange-600 dark:bg-orange-900/30 dark:text-orange-400 group-hover:scale-110 transition-transform">
+                        <span class="material-symbols-outlined" style="font-size: 28px;">smart_toy</span>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white">Take Home Your Bot</h3>
+                        <p class="mt-2 text-slate-600 dark:text-slate-400">Every participant gets to keep their creation
+                            to continue learning and playing at home.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Workshops Section -->
+    <section class="py-16 sm:py-24" id="workshops">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+                <div>
+                    <h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
+                        Our Workshops
+                    </h2>
+                    <p class="mt-2 text-lg text-slate-600 dark:text-slate-400 max-w-2xl">
+                        Choose the perfect level for your young engineer.
+                    </p>
+                </div>
+                <a class="hidden md:flex items-center text-primary font-bold hover:underline" href="#">
+                    View full schedule <span class="material-symbols-outlined ml-1">arrow_forward</span>
+                </a>
+            </div>
+            <div class="grid gap-8 lg:grid-cols-2">
+                <!-- Workshop Card 1 -->
+                <div
+                    class="flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                    <div class="relative h-48 w-full bg-slate-200 sm:h-64">
+                        <div class="absolute inset-0 bg-cover bg-center"
+                            data-alt="Young girl holding a small assembled robot car"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC8xkZ5GYkimKAvFS4HfxeMvNYPO3_-7Yo7mGHEzZ6stGMBtd1wS4TBYMGkUYVLX8osMLhUBE7fCQSBjxTHSKSmMp3SIXvU-sBbxbCgAwEXQpzZYwQmEYuosV8Cqm0NA3IRuLtqJ03N5k_Y3rrTrmilxDYK6uaLe98sYyX_4oU6DXK_YfwluoneXP4M9mEF0JUqGHI_fMkMUS5kZS3m94MxYb4Zc9SwbiRsBzyu1jhKHVTnElwDf4ugRffzMC54E1Mndpqp6SlraDo');">
+                        </div>
+                        <div
+                            class="absolute top-4 left-4 rounded-lg bg-white/90 px-3 py-1 text-xs font-bold uppercase tracking-wider text-slate-900 backdrop-blur-sm">
+                            Ages 6-9
+                        </div>
+                    </div>
+                    <div class="flex flex-1 flex-col justify-between p-6">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Junior Builders</h3>
+                                <span class="text-lg font-bold text-primary">$150</span>
+                            </div>
+                            <p class="mb-4 text-slate-600 dark:text-slate-400">
+                                A perfect introduction to robotics. Kids learn to assemble pre-programmed bots and
+                                understand basic mechanics through play and exploration.
+                            </p>
+                            <ul class="mb-6 space-y-2 text-sm text-slate-500 dark:text-slate-400">
+                                <li class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-green-500 text-lg">check_circle</span>
+                                    <span>Basic assembly mechanics</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-green-500 text-lg">check_circle</span>
+                                    <span>Intro to sensors</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <button
+                            class="w-full rounded-xl bg-slate-100 py-3 text-center text-sm font-bold text-slate-900 transition-colors hover:bg-slate-200 dark:bg-slate-800 dark:text-white dark:hover:bg-slate-700">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+                <!-- Workshop Card 2 -->
+                <div
+                    class="flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-shadow hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+                    <div class="relative h-48 w-full bg-slate-200 sm:h-64">
+                        <div class="absolute inset-0 bg-cover bg-center"
+                            data-alt="Teenager working on a laptop with arduino board connected"
+                            style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAf6x5cctBkJotL6AQk9N6TENc9X-2P7t6cZJqN1CoslW2ooTndSpotmFwJ37rWUKglxlnejbASFS-66xRxzZCoyblxWvyK0kHpi4Fj-WJyV0cTFrnOFxHcwIoNfbFiLyFt7RSSph0FDHqkXWkXXWgbUR1X4ZCzJ58uQyO0OauQRt432MPDUdAL7UEM0SnT7ND-ll8Z_42IFC72RdSSAzRXDRxAsweMVJY-KBySRPNYKqhy6pjil2-bJ49HsgE_JdDcUmBZ5emEFmw');">
+                        </div>
+                        <div
+                            class="absolute top-4 left-4 rounded-lg bg-primary/90 px-3 py-1 text-xs font-bold uppercase tracking-wider text-white backdrop-blur-sm">
+                            Ages 10-14
+                        </div>
+                    </div>
+                    <div class="flex flex-1 flex-col justify-between p-6">
+                        <div>
+                            <div class="flex items-center justify-between mb-2">
+                                <h3 class="text-xl font-bold text-slate-900 dark:text-white">Master Coders</h3>
+                                <span class="text-lg font-bold text-primary">$200</span>
+                            </div>
+                            <p class="mb-4 text-slate-600 dark:text-slate-400">
+                                Dive deeper into the logic behind the robots. Participants write their own code to
+                                control sensors, motors, and LEDs using Arduino.
+                            </p>
+                            <ul class="mb-6 space-y-2 text-sm text-slate-500 dark:text-slate-400">
+                                <li class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-green-500 text-lg">check_circle</span>
+                                    <span>C++ / Arduino Programming</span>
+                                </li>
+                                <li class="flex items-center gap-2">
+                                    <span class="material-symbols-outlined text-green-500 text-lg">check_circle</span>
+                                    <span>Complex sensor integration</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <button
+                            class="w-full rounded-xl bg-primary py-3 text-center text-sm font-bold text-white transition-colors hover:bg-primary/90">
+                            Book Workshop
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 text-center md:hidden">
+                <a class="inline-flex items-center text-primary font-bold" href="#">
+                    View full schedule <span class="material-symbols-outlined ml-1">arrow_forward</span>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Gallery / CTA Section -->
+    <section class="py-16 sm:py-24 bg-primary/5 dark:bg-slate-900/30">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-10 text-center">
+                <h2 class="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
+                    Built by Kids, Powered by Curiosity
+                </h2>
+            </div>
+            <!-- Masonry-ish Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 h-96 md:h-80 mb-12">
+                <div class="col-span-1 md:col-span-1 h-full rounded-xl overflow-hidden relative">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 hover:scale-110"
+                        data-alt="Close up of robotic hand with wires"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDNyJ-B06Eh-d7k6dSpOcvV-OVaE85lu_wa2L3tPFXeXb1P9PdhrMSDlCeJzYQhX1vWt5vcwLURuvWIqnccLJOywvB52JKPpStNCqARLisHjgW5pp9DXg5v3sdBCiDbQKkc8QzvPyEH6gJm27GloQAko4nDx2kzZ78Y6nPcUaW_3SFra3rAV_Q8DI5zPLc-e5Uk7K0i7V-2ly-VaJ0kI2cf51e9Njcw8sSa8u-a6YncnbWqlaLZ18rnMjm45k6OjrRgks9Ht6u3iN0');">
+                    </div>
+                </div>
+                <div class="col-span-1 md:col-span-2 h-full rounded-xl overflow-hidden relative">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 hover:scale-110"
+                        data-alt="Group of kids high-fiving in a workshop setting"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCMQLUGUd04DEeQNgxf0R8TFtmFGnZH5xBC0AW746wraXaHreR7KoWhD5HRwExvR30RBVrqTzPNq0TZoNOmbfSuIKSCXaMF78ifKlc7bPsOLYp_ZJ1G5TXCAEQ_vP1H--WXUn029RNYnPOnE02VYDpCn4cERKvXTR2I6IZL_NLd59UkxCbot9fQOf9wYraplkU_dJExT2yLrLPdFKEFHQW6iHS104uf_sYRAgvh2fhjDbm3nQHsYtyGfzB_PxIFE32grO8_aOXzanI');">
+                    </div>
+                </div>
+                <div class="col-span-2 md:col-span-1 h-full rounded-xl overflow-hidden relative">
+                    <div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 hover:scale-110"
+                        data-alt="Child focused on coding on a laptop screen"
+                        style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAty9_Vnt7HnQP6cc6tD16Oo0FtsG-qNVEERswZKxfZMm7bvpDHanPzTCRbahnjeJBT8BaCJ71L-pl_Bpke_RmWAyN5O8fv9vYUPbjR4VWQ8ll-dVWGYzAgdhWXJque0Aw547T2hfY7eksjC5i78UY5mi0OH8uul8HekU1j6HmTbGKyut0UAKz-G5Cqewv-AwqC8LXftutrd-HGyFx4GT1Xnd7nIIR9qwvHxxnRIHYOejS6H5CQtC5yuikUj1ISAFvUN06NVSh61jQ');">
+                    </div>
+                </div>
+            </div>
+            <div
+                class="relative overflow-hidden rounded-3xl bg-primary px-6 py-16 text-center shadow-xl sm:px-16 md:py-24">
+                <div class="relative z-10 max-w-2xl mx-auto">
+                    <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                        Ready to start building?
+                    </h2>
+                    <p class="mx-auto mt-6 max-w-xl text-lg leading-8 text-blue-100">
+                        Join hundreds of young inventors turning their ideas into reality. Spaces are limited for our
+                        upcoming weekend sessions.
+                    </p>
+                    <div class="mt-10 flex items-center justify-center gap-x-6">
+                        <a class="rounded-xl bg-white px-8 py-3.5 text-sm font-bold text-primary shadow-sm hover:bg-blue-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                            href="#">
+                            Get Started
+                        </a>
+                        <a class="text-sm font-semibold leading-6 text-white hover:text-blue-100 flex items-center gap-1"
+                            href="#">
+                            Contact Support <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                        </a>
+                    </div>
+                </div>
+                <!-- Decorative Circles -->
+                <svg aria-hidden="true"
+                    class="absolute left-1/2 top-1/2 -z-10 h-[64rem] w-[64rem] -translate-x-1/2 [mask-image:radial-gradient(closest-side,white,transparent)]"
+                    viewbox="0 0 1024 1024">
+                    <circle cx="512" cy="512" fill="url(#gradient)" fill-opacity="0.25" r="512"></circle>
+                    <defs>
+                        <radialgradient id="gradient">
+                            <stop stop-color="#ffffff"></stop>
+                            <stop offset="1" stop-color="#ffffff"></stop>
+                        </radialgradient>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-background-light dark:bg-background-dark border-t border-slate-200 dark:border-slate-800">
+        <div class="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
+            <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+                <div class="space-y-4">
+                    <div class="flex items-center gap-2">
+                        <div class="flex size-8 items-center justify-center rounded bg-primary text-white">
+                            <span class="material-symbols-outlined">smart_toy</span>
+                        </div>
+                        <span class="text-xl font-bold text-slate-900 dark:text-white">Buyobot</span>
+                    </div>
+                    <p class="text-sm leading-6 text-slate-600 dark:text-slate-400 max-w-xs">
+                        Empowering the next generation of engineers, one robot at a time.
+                    </p>
+                    <div class="flex gap-4">
+                        <a class="text-slate-400 hover:text-slate-500 dark:hover:text-slate-300" href="#">
+                            <span class="sr-only">Facebook</span>
+                            <!-- Social icon placeholder using text for simplicity or custom svg could go here -->
+                            <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24">
+                                <path clip-rule="evenodd"
+                                    d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                                    fill-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <a class="text-slate-400 hover:text-slate-500 dark:hover:text-slate-300" href="#">
+                            <span class="sr-only">Twitter</span>
+                            <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewbox="0 0 24 24">
+                                <path
+                                    d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div>
+                            <h3 class="text-sm font-semibold leading-6 text-slate-900 dark:text-white">Product</h3>
+                            <ul class="mt-6 space-y-4" role="list">
+                                <li><a class="text-sm leading-6 text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white"
+                                        href="#">Workshops</a></li>
+                                <li><a class="text-sm leading-6 text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white"
+                                        href="#">Kits</a></li>
+                                <li><a class="text-sm leading-6 text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white"
+                                        href="#">Curriculum</a></li>
+                            </ul>
+                        </div>
+                        <div class="mt-10 md:mt-0">
+                            <h3 class="text-sm font-semibold leading-6 text-slate-900 dark:text-white">Company</h3>
+                            <ul class="mt-6 space-y-4" role="list">
+                                <li><a class="text-sm leading-6 text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white"
+                                        href="#">About Us</a></li>
+                                <li><a class="text-sm leading-6 text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white"
+                                        href="#">Careers</a></li>
+                                <li><a class="text-sm leading-6 text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white"
+                                        href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="md:grid md:grid-cols-2 md:gap-8">
+                        <div class="mt-10 md:mt-0 col-span-2">
+                            <h3 class="text-sm font-semibold leading-6 text-slate-900 dark:text-white">Subscribe to our
+                                newsletter</h3>
+                            <p class="mt-2 text-sm leading-6 text-slate-600 dark:text-slate-400">
+                                The latest news, articles, and resources, sent to your inbox weekly.
+                            </p>
+                            <form class="mt-6 sm:flex sm:max-w-md">
+                                <label class="sr-only" for="email-address">Email address</label>
+                                <input autocomplete="email"
+                                    class="w-full min-w-0 appearance-none rounded-lg border-0 bg-white dark:bg-slate-800 px-3 py-1.5 text-base text-slate-900 dark:text-white shadow-sm ring-1 ring-inset ring-slate-300 dark:ring-slate-700 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:w-64 sm:text-sm sm:leading-6 xl:w-full"
+                                    id="email-address" name="email-address" placeholder="Enter your email" required=""
+                                    type="email" />
+                                <div class="mt-4 sm:ml-4 sm:mt-0 sm:flex-shrink-0">
+                                    <button
+                                        class="flex w-full items-center justify-center rounded-lg bg-primary px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
+                                        type="submit">Subscribe</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-16 border-t border-slate-200 dark:border-slate-800 pt-8 sm:mt-20 lg:mt-24">
+                <p class="text-xs leading-5 text-slate-500 dark:text-slate-400">© 2024 Buyobot Inc. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
